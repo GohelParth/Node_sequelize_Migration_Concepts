@@ -9,7 +9,8 @@ async function getUserHasmanyOrders(req, res) {
                 as: 'User_Orders', // optional
                 attributes: ["id", "items", "user_id",] // any specific field from record
             }],
-            where: { id: 1 }
+            where: { id: 1 },
+            raw : true
         });
 
         if (getUserOrders) {
